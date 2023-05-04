@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next';
 const Munkaink = () => {
     return (
         <div>
-            Enter
+            Munkaink
         </div>
     );
 }
