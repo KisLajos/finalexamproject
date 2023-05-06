@@ -1,68 +1,76 @@
 .navbar {
     background-color: #333;
     color: #fff;
-  
+
     .nav_links {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-  
-      .nav_link {
-        margin: 0 10px;
-        position: relative;
-  
-        &:hover {
-          .dropdown_content {
-            display: block;
-          }
-        }
-  
-        a {
-          color: #fff;
-          text-decoration: none;
-          display: block;
-          padding: 10px;
-          transition: background-color 0.3s ease-in-out;
-  
-          &:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-          }
-        }
-      }
-  
-      .dropdown {
-        position: relative;
-  
-        .dropdown_content {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          background-color: #f9f9f9;
-          min-width: 160px;
-          padding: 10px;
-          z-index: 1;
-  
-          li {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-  
-            a {
-              color: #333;
-              text-decoration: none;
-              display: block;
-              padding: 10px;
-  
-              &:hover {
-                background-color: #ddd;
-              }
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        .nav_link {
+            margin: 0 10px;
+            position: relative;
+
+            &:hover {
+                .dropdown_content {
+                    display: block;
+                }
             }
-          }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+                transition: background-color 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+            }
         }
-      }
+
+        .dropdown {
+            position: relative;
+
+            .dropdown_content {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                padding: 10px;
+                z-index: 1;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    a {
+                        color: #333;
+                        text-decoration: none;
+                        display: block;
+                        padding: 10px;
+
+                        &:hover {
+                            background-color: #ddd;
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
+}
+
+@media screen and (max-width:480px) {
+    .navbar {
+        .nav_links {
+            display: none;
+        }
+    }
+}

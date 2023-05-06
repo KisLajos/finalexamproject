@@ -1,6 +1,7 @@
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
+import { Category, WPTermObject } from '..';
 
 export interface Sublink {
     href: string;
@@ -10,15 +11,16 @@ export interface Sublink {
 export interface DropdownProps {
     children?: React.ReactNode
     //key: string;
-    sublinks: Sublink[];
+    categorychildren: WPTermObject[];
+    parentname: string
 }
 
-export const DropdownMenu = ({sublinks} : DropdownProps) => {
+export const DropdownMenu = ({categorychildren, parentname} : DropdownProps) => {
     return (
         <ul>
-            {sublinks.map((sublinks) => (
+            {categorychildren.map((categorychild) => (
                 <li>
-                    <Link href={sublinks.href}>{sublinks.title}</Link>
+                    <Link href={`/${parentname}/${categorychild.slug}`}>{categorychild.name}</Link>
                 </li>
             ))}
         </ul>
