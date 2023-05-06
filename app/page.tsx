@@ -72,7 +72,6 @@ export default function Home() {
           </h2>
           <p>Explore the Next.js 13 playground.</p>
         </a>
-
         <a
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
