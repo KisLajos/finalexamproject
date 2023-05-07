@@ -3,6 +3,7 @@ import React from 'react'
 import { DropdownMenu, Sublink } from './Dropdown'
 import styles from './styles.module.scss'
 import BurgerMenu from './BurgerMenu'
+import Navlink from './Navlink'
 
 export interface WPTermObject {
   term_id: number,
@@ -37,19 +38,11 @@ export default async function Navbar() {
 
       <ul className={styles.nav_links}>
         <li>
-          <Link href={"/"}>Főmenü</Link>
+          <Link href={"/"}>Főoldal</Link>
         </li>
         {resCategories.map((category:Category) => (
               category.acf.show_on_navbar ?
-              <li className={`${styles.nav_link} ${styles.dropdown}`}>
-                {!category.acf.children_data ? 
-                <Link href={`/${category.slug}`}>{category.name}</Link>
-                :
-                <div>
-                  <span>{category['name']}</span>
-                  <DropdownMenu parentname={category.acf.parent_data.slug} categorychildren={category.acf.children_data}></DropdownMenu>
-                </div>}
-              </li>
+              <Navlink category={category}/>
               :
               ""
             )

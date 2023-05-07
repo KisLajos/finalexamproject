@@ -1,10 +1,21 @@
 import Image from 'next/image'
+import HeroGallery from '@/components/HeroGallery'
+import MainPageCards from '@/components/MainPageCards'
+import HowWeWork from '@/components/HowWeWork'
+import FeaturedGallery from '@/components/FeaturedGallery'
 import styles from './page.module.css'
+import Reviews from '@/components/Reviews'
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
+      <HeroGallery />
+      <MainPageCards />
+      <HowWeWork />
+      <FeaturedGallery />
+      <Reviews />
+
+      {/* <div className={styles.description}>
         
         <div>
           <a
@@ -85,7 +96,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   )
 }
