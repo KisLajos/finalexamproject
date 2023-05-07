@@ -1,21 +1,17 @@
-import { GetServerSideProps } from 'next';
+import { getPageDataBySlug } from "@/utils/wordpressfunctions";
+import parse from "html-react-parser";
 
-const Munkaink = () => {
+export async function Munkaink() {
+    const page = await getPageDataBySlug("munkaink")
+    console.log(page)
+
     return (
         <div>
-            Munkaink
+            {parse(page.title.rendered)}
+            {parse(page.content.rendered)}
+            {parse(page.excerpt.rendered)}
         </div>
     );
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-
-
-    return {
-        props:{
-
-        }
-    }
-}
-
-export default Munkaink
+export default Munkaink;

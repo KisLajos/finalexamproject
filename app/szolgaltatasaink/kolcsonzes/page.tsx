@@ -1,21 +1,17 @@
-import { GetStaticProps } from 'next';
+import { getPageDataBySlug } from "@/utils/wordpressfunctions";
+import parse from "html-react-parser";
 
-const Kolcsonzes = () => {
+export async function Kolcsonzes() {
+    const page = await getPageDataBySlug("kolcsonzes")
+    console.log(page)
+
     return (
         <div>
-            Kolcsonzes
+            {parse(page.title.rendered)}
+            {parse(page.content.rendered)}
+            {parse(page.excerpt.rendered)}
         </div>
     );
-}
-
-export const getStaticProps: GetStaticProps = async (ctx) =>{
-
-
-    return {
-        props:{
-
-        }
-    }
 }
 
 export default Kolcsonzes;

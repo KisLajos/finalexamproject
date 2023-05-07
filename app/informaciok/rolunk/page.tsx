@@ -1,21 +1,17 @@
-import { GetStaticProps } from 'next';
+import { getPageDataBySlug } from "@/utils/wordpressfunctions";
+import parse from "html-react-parser";
 
-const Rolunk = () => {
+export async function Rolunk() {
+    const page = await getPageDataBySlug("rolunk")
+    console.log(page)
+
     return (
         <div>
-            Rolunk
+            {parse(page.title.rendered)}
+            {parse(page.content.rendered)}
+            {parse(page.excerpt.rendered)}
         </div>
     );
-}
-
-export const getStaticProps: GetStaticProps = async (ctx) =>{
-
-
-    return {
-        props:{
-
-        }
-    }
 }
 
 export default Rolunk;

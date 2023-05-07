@@ -1,21 +1,17 @@
-import { GetStaticProps } from 'next';
+import { getPageDataBySlug } from "@/utils/wordpressfunctions";
+import parse from "html-react-parser";
 
-const Fizetes = () => {
+export async function FizetesSzallitas() {
+    const page = await getPageDataBySlug("fizetes-szallitas")
+    console.log(page)
+
     return (
         <div>
-            Fizetes
+            {parse(page.title.rendered)}
+            {parse(page.content.rendered)}
+            {parse(page.excerpt.rendered)}
         </div>
     );
 }
 
-export const getStaticProps: GetStaticProps = async (ctx) =>{
-
-
-    return {
-        props:{
-
-        }
-    }
-}
-
-export default Fizetes;
+export default FizetesSzallitas;

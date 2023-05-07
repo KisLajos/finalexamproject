@@ -1,21 +1,17 @@
-import { GetStaticProps } from 'next';
+import { getPageDataBySlug } from "@/utils/wordpressfunctions";
+import parse from "html-react-parser";
 
-const GYIK = () => {
+export async function GYIK() {
+    const page = await getPageDataBySlug("gyik")
+    console.log(page)
+
     return (
         <div>
-            GYIK
+            {parse(page.title.rendered)}
+            {parse(page.content.rendered)}
+            {parse(page.excerpt.rendered)}
         </div>
     );
-}
-
-export const getStaticProps: GetStaticProps = async (ctx) =>{
-
-
-    return {
-        props:{
-
-        }
-    }
 }
 
 export default GYIK;

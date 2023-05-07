@@ -1,21 +1,17 @@
-import { GetStaticProps } from 'next';
+import { getPageDataBySlug } from "@/utils/wordpressfunctions";
+import parse from "html-react-parser";
 
-const Kapcsolat = () => {
+export async function Kapcsolat() {
+    const page = await getPageDataBySlug("kapcsolat")
+    console.log(page)
+
     return (
         <div>
-            Kapcsolat
+            {parse(page.title.rendered)}
+            {parse(page.content.rendered)}
+            {parse(page.excerpt.rendered)}
         </div>
     );
-}
-
-export const getStaticProps: GetStaticProps = async (ctx) =>{
-
-
-    return {
-        props:{
-
-        }
-    }
 }
 
 export default Kapcsolat;
