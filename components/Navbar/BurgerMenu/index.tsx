@@ -19,11 +19,9 @@ function BurgerMenu({categories}:BurgerMenuProps) {
   }
 
   return (
-    <div className={styles.burgerMenu}>
-      <button className={styles.menuToggle} onClick={handleMenuToggle}>
-        <span className={styles.toggleIcon} />
-        <span className={styles.toggleIcon} />
-        <span className={styles.toggleIcon} />
+    <div className={styles.burger_menu}>
+      <button className={styles.menu_toggle_button} onClick={handleMenuToggle}>
+        <span className={styles.toggle_icon} />
       </button>
       
       <div className={`${styles.nav_links} ${showMenu ? styles.active : ''}`}>

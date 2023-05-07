@@ -1,93 +1,85 @@
-.burgerMenu {
+.burger_menu {
     position: relative;
-    display: none;
-
-    .menuToggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 0.3rem;
-        width: 40px;
-        height: 40px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        position: relative;
-
-        .toggleIcon {
-            display: block;
-            width: 20px;
-            height: 2px;
-            background-color: #aaaaff;
-            position: relative;
-
-            &::before,
-            &::after {
-                content: '';
-                display: block;
-                width: 20px;
-                height: 2px;
-                background-color: #333;
-                position: absolute;
-                left: 0;
-                transition: transform 0.3s ease-in-out;
-            }
-
-            &::before {
-                top: -6px;
-            }
-
-            &::after {
-                top: 6px;
-            }
-        }
-    }
-
-    .nav_links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease-in-out, visibility 0s ease-in-out 0.3s;
-        z-index: 1;
-
-        &.active {
-            opacity: 1;
-            visibility: visible;
-            transition: opacity 0.3s ease-in-out, visibility 0s ease-in-out;
-        }
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-
-            li {
-                margin: 0;
-                padding: 0;
-
-                &:not(:last-child) {
-                    border-bottom: 1px solid #ccc;
-                }
-
-                a {
-                    display: block;
-                    padding: 10px;
-                    text-decoration: none;
-                    color: #333;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width:480px) {
-    .burgerMenu {
+  
+    .menu_toggle_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      position: relative;
+  
+      .toggle_icon {
         display: block;
+        width: 20px;
+        height: 2px;
+        background-color: #333;
+        position: relative;
+  
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 2px;
+          background-color: #333;
+          position: absolute;
+          left: 0;
+          transition: transform 0.3s ease-in-out;
+        }
+  
+        &::before {
+          top: -6px;
+        }
+  
+        &::after {
+          top: 6px;
+        }
+      }
     }
-}
+  
+    .nav_links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0s ease-in-out 0.3s;
+      z-index: 1;
+  
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease-in-out, visibility 0s ease-in-out;
+      }
+  
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+  
+        li {
+          margin: 0;
+          padding: 0;
+  
+          &:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+          }
+  
+          a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+  
