@@ -11,7 +11,7 @@ export interface NavlinkProps {
 
 export default function Navlink({category}: NavlinkProps) {
   return (
-    <li className={`${navstyles.nav_link} ${navstyles.nav_link__parent} ${navstyles.dropdown}`}>
+    <li className={`${navstyles.nav_link} ${navstyles.nav_link__parent} ${navstyles.dropdown} ${styles.testclass}`}>
         {!category.acf.children_data ? 
         <Link href={`/${category.slug}`}>{category.name}</Link>
         :
