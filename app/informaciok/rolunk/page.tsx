@@ -3,7 +3,7 @@ import parse from "html-react-parser";
 
 export async function Rolunk() {
     const page = await getPageDataBySlug("rolunk")
-    console.log(page)
+    //console.log(page)
 
     return (
         <div>

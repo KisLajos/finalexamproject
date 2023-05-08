@@ -3,7 +3,7 @@ import parse from "html-react-parser";
 
 export async function Kapcsolat() {
     const page = await getPageDataBySlug("kapcsolat")
-    console.log(page)
+    //console.log(page)
 
     return (
         <div>

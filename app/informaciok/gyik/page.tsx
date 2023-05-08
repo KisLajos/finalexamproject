@@ -3,7 +3,7 @@ import parse from "html-react-parser";
 
 export async function GYIK() {
     const page = await getPageDataBySlug("gyik")
-    console.log(page)
+    //console.log(page)
 
     return (
         <div>

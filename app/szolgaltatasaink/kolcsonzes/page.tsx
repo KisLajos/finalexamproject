@@ -3,7 +3,7 @@ import parse from "html-react-parser";
 
 export async function Kolcsonzes() {
     const page = await getPageDataBySlug("kolcsonzes")
-    console.log(page)
+    //console.log(page)
 
     return (
         <div>

@@ -3,7 +3,7 @@ import parse from "html-react-parser";
 
 export async function FizetesSzallitas() {
     const page = await getPageDataBySlug("fizetes-szallitas")
-    console.log(page)
+    //console.log(page)
 
     return (
         <div>
