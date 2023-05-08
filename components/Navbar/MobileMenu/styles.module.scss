@@ -1,5 +1,6 @@
 .mobile_menu {
     //position: relative;
+    display: none;
   
     .menu_toggle_button {
       display: flex;
@@ -83,3 +84,8 @@
     }
   }
   
+  @media screen and (max-width:480px) {
+    .mobile_menu {
+      display: block;
+    }
+  }
