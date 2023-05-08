@@ -1,10 +1,7 @@
-import Link from 'next/link'
 import React from 'react'
-import { DropdownMenu, Sublink } from './Dropdown'
 import styles from './styles.module.scss'
-import BurgerMenu from './BurgerMenu'
-import Navlink from './Navlink'
 import NavlinkContainer from './NavlinkContainer'
+import MobileMenu from './MobileMenu'
 
 export interface WPTermObject {
   term_id: number,
@@ -35,7 +32,7 @@ export default async function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <BurgerMenu categories={resCategories}/>
+      <MobileMenu categories={resCategories}/>
 
       <NavlinkContainer categories={resCategories}/>
     </nav>
