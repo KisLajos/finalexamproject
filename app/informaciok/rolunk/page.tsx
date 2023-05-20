@@ -7,9 +7,16 @@ export async function Rolunk() {
 
     return (
         <div>
-            {parse(page.title.rendered)}
-            {parse(page.content.rendered)}
-            {parse(page.excerpt.rendered)}
+            <h1>{parse(page.title.rendered)}</h1>
+            <section>
+                <div>
+                    {parse(page.acf.text_block_1)}
+                </div>
+
+                <div>
+                    {parse(page.acf.text_block_2)}
+                </div>
+            </section>
         </div>
     );
 }
