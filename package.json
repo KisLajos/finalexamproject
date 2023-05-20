@@ -13,6 +13,7 @@
     "@types/react": "18.2.5",
     "@types/react-dom": "18.2.3",
     "@types/woocommerce__woocommerce-rest-api": "^1.0.2",
+    "@woocommerce/woocommerce-rest-api": "^1.0.1",
     "eslint": "8.39.0",
     "eslint-config-next": "13.4.0",
     "framer-motion": "^10.12.7",
