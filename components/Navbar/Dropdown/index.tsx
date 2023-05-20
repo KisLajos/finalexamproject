@@ -22,7 +22,7 @@ export const DropdownMenu = ({categorychildren, parentname} : DropdownProps) => 
     return (
         <ul className={navbarstyles.dropdown_content}>
             {categorychildren.map((categorychild) => (
-                <li className={`${navlinkstyles.nav_link} ${navlinkstyles.nav_link__child}`}>
+                <li className={`${navlinkstyles.nav_link} ${navbarstyles.nav_link__child}`}>
                     <Link href={`/${parentname}/${categorychild.slug}`}>{categorychild.name}</Link>
                 </li>
             ))}
