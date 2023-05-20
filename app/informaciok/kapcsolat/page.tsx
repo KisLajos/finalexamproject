@@ -1,3 +1,4 @@
+import ContactLinks from "@/components/ContactLinks";
 import { getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
@@ -10,6 +11,8 @@ export async function Kapcsolat() {
             {parse(page.title.rendered)}
             {parse(page.content.rendered)}
             {parse(page.excerpt.rendered)}
+
+            <ContactLinks/>
         </div>
     );
 }
