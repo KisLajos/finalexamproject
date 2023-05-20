@@ -5,17 +5,15 @@ import parse from "html-react-parser";
 
 export async function Termekek() {
     const page = await getPageDataBySlug("termekek")
-    const products = await getAllProducts();
+    const products = await getAllProducts().catch((error) =>
+        console.error(error)
+    );
     //const products = await getProducts()
-    //console.log(page)
+    //console.log(products)
 
     return (
         <div>
-            {parse(page.title.rendered)}
-            {parse(page.content.rendered)}
-            {parse(page.excerpt.rendered)}
-
-            <ProductGrid products={products} />
+            <ProductGrid title={page.title.rendered} products={products.data} />
         </div>
     );
 }

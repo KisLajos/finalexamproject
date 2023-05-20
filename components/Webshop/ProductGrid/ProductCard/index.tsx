@@ -1,8 +1,10 @@
+import Link from 'next/link'
 import React from 'react'
 
 export interface Product {
   name: string,
-  price: number
+  price: number,
+  slug: string
 }
 
 export interface ProductCardProps {
@@ -12,7 +14,7 @@ export interface ProductCardProps {
 export default function ProductCard({product}: ProductCardProps) {
   return (
     <div>
-      <span>{product.name}</span>
+      <Link href={`/webshop/termekek/${product.slug}`}>{product.name}</Link>
       <span>{product.price}</span>
     </div>
   )
