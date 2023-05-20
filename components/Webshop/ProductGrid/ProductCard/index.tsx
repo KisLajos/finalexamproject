@@ -1,7 +1,19 @@
 import React from 'react'
 
-export default function ProductCard() {
+export interface Product {
+  name: string,
+  price: number
+}
+
+export interface ProductCardProps {
+  product: Product
+}
+
+export default function ProductCard({product}: ProductCardProps) {
   return (
-    <div>Termék</div>
+    <div>
+      <span>{product.name}</span>
+      <span>{product.price}</span>
+    </div>
   )
 }

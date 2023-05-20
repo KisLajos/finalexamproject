@@ -1,9 +1,11 @@
 import ProductGrid from "@/components/Webshop/ProductGrid";
+import { getAllProducts } from "@/utils/woocommercefunctions";
 import { getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
 export async function Termekek() {
     const page = await getPageDataBySlug("termekek")
+    const products = await getAllProducts();
     //const products = await getProducts()
     //console.log(page)
 
@@ -13,7 +15,7 @@ export async function Termekek() {
             {parse(page.content.rendered)}
             {parse(page.excerpt.rendered)}
 
-            <ProductGrid />
+            <ProductGrid products={products} />
         </div>
     );
 }
