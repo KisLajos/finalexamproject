@@ -9,7 +9,9 @@ import styles from './styles.module.scss'
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-        <Image src={""} alt='Logo'/>
+        <div className={styles.footerLogoContainer}>
+          <Image src={"https://finalexamproject-wp.lajoskis.dk/wp-content/uploads/2023/05/diolevel.bezs_-scaled.jpg"} alt='Logo' width={200} height={200}/>
+        </div>
         <ContactLinks/>
         <FooterLinks/>
     </footer>
