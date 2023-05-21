@@ -3,7 +3,7 @@ export async function getPageDataBySlug(slug: string) {
     
 
     try {
-        const resPage = await fetch(`https://finalexamproject-wp.lajoskis.dk/wp-json/wp/v2/pages?slug=${slug}`)
+        const resPage = await fetch(`https://finalexamproject-wp.lajoskis.dk/wp-json/wp/v2/pages?slug=${slug}`, {cache: "no-cache"})
         const pageDataArray = await resPage.json();
         const page = pageDataArray[0];
 
