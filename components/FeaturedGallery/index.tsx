@@ -22,6 +22,13 @@ export interface Image {
       }
     }
   }
+  url?: string,
+  sizes?: {
+    medium_width: number,
+    medium_height: number,
+    large_width: number,
+    large_height: number,
+  }
 }
 
 export interface FeaturedGalleryProps {
