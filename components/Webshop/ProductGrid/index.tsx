@@ -2,6 +2,7 @@
 import React from 'react'
 import ProductCard from './ProductCard'
 import { Product } from './ProductCard'
+import styles from './styles.module.scss'
 
 export interface ProductGridProps {
   products: Product[],
@@ -15,9 +16,11 @@ export default function ProductGrid({products, title}: ProductGridProps) {
   return (
     <div>
         <h1>{title}</h1>
-        {products.map(product => (
-          <ProductCard product={product} />
-        ))}
+        <div className={styles.productCardContainer}>
+          {products.map(product => (
+            <ProductCard product={product} />
+          ))}
+        </div>
     </div>
   )
 }
