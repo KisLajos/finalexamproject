@@ -1,8 +1,11 @@
 import React from 'react'
 import ReviewSlider from './ReviewSlider'
+import { getReviews } from '@/utils/wordpressfunctions';
 
-export default function Reviews() {
+export default async function Reviews() {
+  const reviews = await getReviews();
+
   return (
-    <ReviewSlider />
+    <ReviewSlider reviews={reviews} />
   )
 }
