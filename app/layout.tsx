@@ -1,13 +1,19 @@
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 import './globals.scss'
 import { Inter } from 'next/font/google'
-import Footer from '@/components/Footer'
+import { Roboto } from 'next/font/google';
 
 export interface RootLayoutProps {
   children?: React.ReactNode
 }
 
 const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Create Next App',
@@ -17,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children } : RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Navbar/>
         {children}
         <Footer/>
