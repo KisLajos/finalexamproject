@@ -1,17 +1,18 @@
 import FeaturedGallery from "@/components/FeaturedGallery";
-import { getPageDataBySlug } from "@/utils/wordpressfunctions";
+import { getMediaFromWordPress, getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
 export async function Munkaink() {
     const page = await getPageDataBySlug("munkaink")
+    const images = await getMediaFromWordPress();
+    //console.log(images)
     //console.log(page)
 
     return (
         <div>
-            {parse(page.title.rendered)}
+            <h1>{parse(page.title.rendered)}</h1>
             {parse(page.content.rendered)}
-            {parse(page.excerpt.rendered)}
-            <FeaturedGallery/>
+            <FeaturedGallery images={images}/>
         </div>
     );
 }
