@@ -10,7 +10,6 @@ export async function Dekorcsomagok() {
         <div>
             {parse(page.title.rendered)}
             {parse(page.content.rendered)}
-            {parse(page.excerpt.rendered)}
 
             <DecorPackagesContainer/>
         </div>
