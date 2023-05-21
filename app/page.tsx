@@ -2,17 +2,16 @@ import Image from 'next/image'
 import HeroGallery from '@/components/HeroGallery'
 import MainPageCards from '@/components/MainPageCards'
 import HowWeWork from '@/components/HowWeWork'
-import FeaturedGallery from '@/components/FeaturedGallery'
 import styles from './page.module.css'
 import Reviews from '@/components/Reviews'
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className={styles.main}>
       <HeroGallery />
       <MainPageCards />
       <HowWeWork />
-      <FeaturedGallery />
+      {/* featured image goes here */}
       <Reviews />
 
       {/* <div className={styles.description}>
