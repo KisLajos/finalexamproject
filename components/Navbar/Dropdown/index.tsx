@@ -2,8 +2,8 @@ import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { Category, WPTermObject } from '..';
-import styles from './style.module.scss';
-import navlinkstyles from '../Navlink/style.module.scss'
+import styles from './styles.module.scss';
+import navlinkstyles from '../Navlink/styles.module.scss'
 import navbarstyles from '../styles.module.scss';
 
 export interface Sublink {

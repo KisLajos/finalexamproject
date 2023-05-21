@@ -1,7 +1,7 @@
 import React from 'react'
 import { DropdownMenu } from '../Dropdown'
 import Link from 'next/link'
-import styles from './style.module.scss'
+import styles from './styles.module.scss'
 import navstyles from '../styles.module.scss'
 import { Category } from '..'
 
