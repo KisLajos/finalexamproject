@@ -59,12 +59,15 @@ const ReviewSlider = ({reviews} : ReviewSliderProps) => {
       </AnimatePresence>
 
       <div className={styles.slider_controls}>
-        <button onClick={prevReview} disabled={reviews.length <= 1}>
-          Previous
-        </button>
-        <button onClick={nextReview} disabled={reviews.length <= 1}>
-          Next
-        </button>
+        <div className={styles.dot_navigation}>
+          {reviews.map((review, index) => (
+            <div
+              key={index}
+              className={`${styles.dot} ${index === currentIndex ? styles.active : ''}`}
+              onClick={() => setCurrentIndex(index)}
+            ></div>
+          ))}
+        </div>
       </div>
     </div>
   );
