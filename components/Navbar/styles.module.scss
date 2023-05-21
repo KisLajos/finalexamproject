@@ -1,6 +1,10 @@
 .navbar {
     background-color: var(--logo-beige);
     color: var(--garnet);
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .nav_links {
         list-style: none;
