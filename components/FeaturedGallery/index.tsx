@@ -29,6 +29,9 @@ export interface Image {
     large_width: number,
     large_height: number,
   }
+  acf?: {
+    show_in_gallery: boolean,
+  }
 }
 
 export interface FeaturedGalleryProps {
@@ -37,7 +40,6 @@ export interface FeaturedGalleryProps {
 
 export default function FeaturedGallery({images} : FeaturedGalleryProps) {
   const controls = useAnimation();
-  //const container = useRef(null);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
 
@@ -45,6 +47,9 @@ export default function FeaturedGallery({images} : FeaturedGalleryProps) {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 },
   };
+
+  // Filtering out the needed images for the gallery
+  var imagesToShow = images.filter(function(el) { return el.acf?.show_in_gallery === true; }); 
 
   // Trigger the animation when the image comes into view
   useEffect(() => {
@@ -57,7 +62,7 @@ export default function FeaturedGallery({images} : FeaturedGalleryProps) {
   return (
     <div className={styles.gallery}>
       {
-        images.map((image: Image) => (
+        imagesToShow.map((image: Image) => (
           <div className={styles.gallery_item} key={image.id} ref={ref}>
             <motion.div 
                 initial="hidden"
