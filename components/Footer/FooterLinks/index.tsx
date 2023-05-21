@@ -1,7 +1,13 @@
+import { getCategories } from '@/components/Navbar'
 import React from 'react'
+import FooterlinkContainer from './FooterlinkContainer'
 
-export default function FooterLinks() {
+export default async function FooterLinks() {
+  const resCategories = await getCategories()
+
   return (
-    <div>FooterLinks</div>
+    <div>
+      <FooterlinkContainer categories={resCategories}/>
+    </div>
   )
 }
