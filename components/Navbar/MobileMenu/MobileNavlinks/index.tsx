@@ -19,7 +19,7 @@ export default function MobileNavlinks({categories, showMenu} : MobileNavlinksPr
             </li>
             {categories.map((category:Category) => (
                 category.acf.show_on_navbar ?
-                <Navlink category={category} />
+                <Navlink key={category.id} category={category} />
                 :
                 ""
                 )

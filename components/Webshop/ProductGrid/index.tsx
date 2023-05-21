@@ -9,8 +9,8 @@ export interface ProductGridProps {
 }
 
 export default function ProductGrid({products, title}: ProductGridProps) {
-  console.log("products in ProductGrid: ")
-  console.log(products)
+  //console.log("products in ProductGrid: ")
+  //console.log(products)
   
   return (
     <div>
