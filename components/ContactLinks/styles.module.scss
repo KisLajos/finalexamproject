@@ -1,0 +1,10 @@
+.contactLinks {
+    display: flex;
+    flex-direction: column;
+
+    span {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
