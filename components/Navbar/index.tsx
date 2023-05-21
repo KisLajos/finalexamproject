@@ -39,7 +39,7 @@ export default async function Navbar() {
   )
 }
 
-async function getCategories() {
+export async function getCategories() {
   const resCategories = await fetch('https://finalexamproject-wp.lajoskis.dk/wp-json/wp/v2/categories?per_page=50');
 
   if (!resCategories.ok) {
