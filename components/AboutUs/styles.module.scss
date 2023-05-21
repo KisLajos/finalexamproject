@@ -1,0 +1,17 @@
+.aboutusContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        padding: 1rem;
+    }
+
+    .aboutusText {
+        padding: 1rem;
+        
+        p {
+            margin: 1rem;
+        }
+    }
+}
