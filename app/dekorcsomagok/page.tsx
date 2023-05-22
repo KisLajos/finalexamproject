@@ -2,7 +2,7 @@ import DecorPackagesContainer from "@/components/DecorPage/DecorPackagesContaine
 import { getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
-export async function Dekorcsomagok() {
+export default async function Dekorcsomagok() {
     const page = await getPageDataBySlug("dekorcsomagok")
     //console.log(page)
 
@@ -16,4 +16,4 @@ export async function Dekorcsomagok() {
     );
 }
 
-export default Dekorcsomagok;
+//export default Dekorcsomagok;

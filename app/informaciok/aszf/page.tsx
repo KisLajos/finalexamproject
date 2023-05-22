@@ -1,7 +1,7 @@
 import { getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
-export async function ASZF() {
+export default async function ASZF() {
     const page = await getPageDataBySlug("aszf")
     //console.log(page)
 
@@ -13,4 +13,4 @@ export async function ASZF() {
     );
 }
 
-export default ASZF;
+//export default ASZF;

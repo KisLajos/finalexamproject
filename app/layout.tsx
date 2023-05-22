@@ -24,6 +24,7 @@ export default function RootLayout({ children } : RootLayoutProps) {
   return (
     <html lang="en">
       <body className={roboto.className}>
+        {/* @ts-expect-error Server Component */}
         <Navbar/>
         {children}
         <Footer/>

@@ -1,7 +1,7 @@
 import { getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
-export async function Kolcsonzes() {
+export default async function Kolcsonzes() {
     const page = await getPageDataBySlug("kolcsonzes")
     //console.log(page)
 
@@ -14,4 +14,4 @@ export async function Kolcsonzes() {
     );
 }
 
-export default Kolcsonzes;
+//export default Kolcsonzes;

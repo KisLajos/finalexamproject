@@ -2,7 +2,7 @@ import FeaturedGallery from "@/components/FeaturedGallery";
 import { getMediaFromWordPress, getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
-export async function Munkaink() {
+export default async function Munkaink() {
     const page = await getPageDataBySlug("munkaink")
     const images = await getMediaFromWordPress();
     //console.log(images)
@@ -17,4 +17,4 @@ export async function Munkaink() {
     );
 }
 
-export default Munkaink;
+//export default Munkaink;

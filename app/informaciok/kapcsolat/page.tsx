@@ -2,7 +2,7 @@ import ContactLinks from "@/components/ContactLinks";
 import { getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
-export async function Kapcsolat() {
+export default async function Kapcsolat() {
     const page = await getPageDataBySlug("kapcsolat")
     //console.log(page)
 
@@ -15,4 +15,4 @@ export async function Kapcsolat() {
     );
 }
 
-export default Kapcsolat;
+//export default Kapcsolat;

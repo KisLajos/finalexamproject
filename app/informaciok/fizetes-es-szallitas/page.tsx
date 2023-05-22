@@ -1,7 +1,7 @@
 import { getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
-export async function FizetesSzallitas() {
+export default async function FizetesSzallitas() {
     const page = await getPageDataBySlug("fizetes-szallitas")
     //console.log(page)
 
@@ -14,4 +14,4 @@ export async function FizetesSzallitas() {
     );
 }
 
-export default FizetesSzallitas;
+//export default FizetesSzallitas;

@@ -24,7 +24,9 @@ export default async function Home() {
       <MainPageCards />
       <HowWeWork />
       <Image src='/munkaink.svg' alt='munkaink' width={900} height={900}/>
+      {/* @ts-expect-error Server Component */}
       <Reviews />
+      {/* @ts-expect-error Server Component */}
       <AboutUs />
     </main>
   )

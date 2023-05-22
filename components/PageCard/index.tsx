@@ -23,8 +23,8 @@ export default function PageCard({title, links, bodytext}:PageCardProps) {
           <h2>{title}</h2>
           {
           <div>
-            {links.map(link =>(
-                <div className={styles.needsBefore}>{link}</div>
+            {links.map((link, index) =>(
+                <div key={"link-" + index} className={styles.needsBefore}>{link}</div>
             ))}
           </div>
           }

@@ -3,7 +3,7 @@ import { getAllProducts, getProduct } from "@/utils/woocommercefunctions";
 import { getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
-export async function Termek({ params }: { params: { productslug: string } }) {
+export default async function Termek({ params }: { params: { productslug: string } }) {
     console.log(params)
     //const page = await getPageDataBySlug("termekek")
     const productRes = await getProduct(params.productslug).catch((error) =>
@@ -20,7 +20,7 @@ export async function Termek({ params }: { params: { productslug: string } }) {
     );
 }
 
-export default Termek;
+//export default Termek;
 
 export async function generateStaticParams() {
     const products = await getAllProducts()

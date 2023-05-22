@@ -12,7 +12,7 @@ export default function ReviewCard({reviews, currentIndex} : ReviewCardProps) {
   return (
     <div className={styles.reviewCard}>
         <div className={styles.reviewCardImageContainer}>
-            <img className={styles.reviewCardImage} src={reviews[currentIndex]?.acf.review_image.url} />
+            <img className={styles.reviewCardImage} alt="Visszajelzés" src={reviews[currentIndex]?.acf.review_image.url} />
         </div>
         
         <div className={styles.reviewCardContent}>

@@ -7,8 +7,6 @@ import { getPageDataBySlug } from '@/utils/wordpressfunctions'
 export default async function AboutUs() {
 const page = await getPageDataBySlug("rolunk")
 
-console.log("page")
-console.log(page)
   return (
     <div className={styles.aboutusContainer}>
         <Image src={page.acf.about_us_image.url} alt="Flóra & Balázs" width={page.acf.about_us_image.width} height={page.acf.about_us_image.height}/>

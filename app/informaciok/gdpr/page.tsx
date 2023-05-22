@@ -1,7 +1,7 @@
 import { getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
-export async function GDPR() {
+export default async function GDPR() {
     const page = await getPageDataBySlug("gdpr")
     //console.log(page)
 
@@ -13,4 +13,4 @@ export async function GDPR() {
     );
 }
 
-export default GDPR;
+//export default GDPR;

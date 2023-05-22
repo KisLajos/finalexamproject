@@ -3,7 +3,7 @@ import { getAllProducts } from "@/utils/woocommercefunctions";
 import { getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
-export async function Termekek() {
+export default async function Termekek() {
     const page = await getPageDataBySlug("termekek")
     const products = await getAllProducts().catch((error) =>
         console.error(error)
@@ -18,4 +18,4 @@ export async function Termekek() {
     );
 }
 
-export default Termekek;
+//export default Termekek;

@@ -1,7 +1,7 @@
 import { getPageDataBySlug } from "@/utils/wordpressfunctions";
 import parse from "html-react-parser";
 
-export async function Konzultacio() {
+export default async function Konzultacio() {
     const page = await getPageDataBySlug("szemelyes-konzultacio")
     //console.log(page)
 
@@ -14,4 +14,4 @@ export async function Konzultacio() {
     );
 }
 
-export default Konzultacio;
+//export default Konzultacio;

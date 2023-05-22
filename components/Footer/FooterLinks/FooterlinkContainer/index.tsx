@@ -12,7 +12,7 @@ export default function FooterlinkContainer({categories} : FooterlinkContainerPr
     <ul className={styles.footerlinks}>
         {categories.map((category:Category) => (
               category.acf.show_on_navbar ?
-              <Footerlink category={category}/>
+              <Footerlink key={"key-" + category.id} category={category}/>
               :
               ""
             )

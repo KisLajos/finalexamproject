@@ -17,7 +17,7 @@ export default function NavlinkContainer({categories} : NavlinkContainerProps) {
         </li>
         {categories.map((category:Category) => (
               category.acf.show_on_navbar ?
-              <Navlink category={category}/>
+              <Navlink key={"nav-" + category.id} category={category}/>
               :
               ""
             )
