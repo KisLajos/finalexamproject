@@ -23,7 +23,7 @@ export default async function Home() {
       <HeroGallery images={imagesToSet} interval={5000} />
       <MainPageCards />
       <HowWeWork />
-      {/* featured image goes here */}
+      <Image src='/munkaink.svg' alt='munkaink' width={900} height={900}/>
       <Reviews />
       <AboutUs />
     </main>
